@@ -5,10 +5,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TicketSystem.Core.Framework;
 
 namespace TicketSystem.Core.Model
 {
-    public class Event
+    public class Event : Entity
     {
         //Event ID, name, date, location, price, # of tickets available, special notes 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]

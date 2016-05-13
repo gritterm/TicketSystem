@@ -8,6 +8,9 @@ namespace TicketSystem.Core.Framework
 {
     public abstract class Entity
     {
-        public abstract bool PreSave();
+        public virtual bool PreSave()
+        {
+            return true;
+        }
     }
 }

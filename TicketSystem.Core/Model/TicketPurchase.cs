@@ -13,7 +13,8 @@ namespace TicketSystem.Core.Model
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Key]
-        public int ID { get; set; }
+        public int Ticket_Purchase_ID { get; set; }
+        public int Customer_ID { get; set; }
         public string Customer_Name { get; set; }
         public int Total { get; set; }
         public bool Paid { get; set; }

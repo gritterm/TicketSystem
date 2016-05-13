@@ -25,6 +25,8 @@ namespace TicketSystem.Core
         public DbSet<TicketPurchase> TicketPurchases { get; set; }
         public DbSet<TicketPurchaseLine> TicketPurchaseLines { get; set; }
         public DbSet<Client> Clients { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Address> Addresses { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
