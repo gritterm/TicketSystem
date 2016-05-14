@@ -1,0 +1,30 @@
+{
+    "folders":
+    [
+        {
+            "path": "controllers",
+             "name": "controllers",
+
+            "follow_symlinks": true
+        },
+        {
+            "path": "services",
+            "name": "services"
+        },
+        {
+            "path": "views",
+            "name": "views"
+        }
+    ],
+    "settings":
+    {
+        "tab_size": 2
+    },
+    "build_systems":
+    [
+        {
+            "name": "List",
+            "shell_cmd": "ls -l"
+        }
+    ]
+}
