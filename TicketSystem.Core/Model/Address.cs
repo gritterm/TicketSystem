@@ -7,7 +7,7 @@ namespace TicketSystem.Core.Model
     public class Address : Entity
     {
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int Address_ID { get; set; }
         [MaxLength(100)]

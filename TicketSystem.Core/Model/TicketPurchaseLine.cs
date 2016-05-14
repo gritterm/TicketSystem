@@ -5,12 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TicketSystem.Core.Framework;
 
 namespace TicketSystem.Core.Model
 {
-    public class TicketPurchaseLine
+    public class TicketPurchaseLine : Entity
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int Ticket_Purchase_Line_ID { get; set; }
         public int Ticket_Purchase_ID { get; set; }

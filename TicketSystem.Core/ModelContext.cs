@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TicketSystem.Core.Model;
+using System.Data.Entity.Core.Objects;
+using TicketSystem.Core.Interfaces;
 
 namespace TicketSystem.Core
 {
@@ -37,8 +39,30 @@ namespace TicketSystem.Core
             modelBuilder.Entity<IdentityUserRole>().HasKey(r => new { r.RoleId, r.UserId });
         }
 
+        public void PreSave()
+        {
+            var validEntity = EntityState.Added | EntityState.Modified | EntityState.Deleted;
+            var stateEntries = ChangeTracker.Entries<IEntity>().Where(z =>((z.State & validEntity) != 0));
+            foreach (var stateEntry in stateEntries)
+            {
+                var entity = stateEntry.Entity as IEntity;
+                if(!entity.PreSave(stateEntry.State))
+                {
+                    this.Entry(entity).State = EntityState.Detached;
+                }
+            }
+        }
+        public override int SaveChanges()
+        {
+            PreSave();
+            return base.SaveChanges();
+        }
+
+        public override Task<int> SaveChangesAsync()
+        {
+            return base.SaveChangesAsync();
+        }
 
 
-        
     }
 }

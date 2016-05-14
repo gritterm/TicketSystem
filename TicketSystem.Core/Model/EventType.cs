@@ -5,12 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TicketSystem.Core.Framework;
 
 namespace TicketSystem.Core.Model
 {
-    public class EventType
+    public class EventType : Entity
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int Event_Type_ID { get; set; }
         public string Event_Type_Name { get; set; }

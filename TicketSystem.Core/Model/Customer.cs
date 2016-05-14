@@ -12,7 +12,7 @@ namespace TicketSystem.Core.Model
     public class Customer : Entity
     {
         //Event ID, name, date, location, price, # of tickets available, special notes 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int Customer_ID { get; set; }
         [MaxLength(100)]

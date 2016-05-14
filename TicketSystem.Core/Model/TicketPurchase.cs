@@ -9,9 +9,9 @@ using TicketSystem.Core.Framework;
 
 namespace TicketSystem.Core.Model
 {
-    public class TicketPurchase
+    public class TicketPurchase : Entity
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int Ticket_Purchase_ID { get; set; }
         public int Customer_ID { get; set; }
@@ -20,6 +20,7 @@ namespace TicketSystem.Core.Model
         public bool Paid { get; set; }
         public DateTimeOffset Date { get; set; }
 
+        [ForeignKey("Ticket_Purchase_ID")]
         public virtual ObservableListSource<TicketPurchaseLine> TicketPurchaseLines { get; set; }
         // Customer Name, Total, Paid, Date, Credit Card # 
     }

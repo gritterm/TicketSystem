@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -41,6 +43,35 @@ namespace AngularJSAuthentication.API.Controllers
             _mc.Customers.Add(product);
             await _mc.SaveChangesAsync();
             return Created(product);
+        }
+
+        public async Task<IHttpActionResult> Put([FromODataUri] int key, Customer update)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            if (key != update.Customer_ID)
+            {
+                return BadRequest();
+            }
+            _mc.Entry(update).State = EntityState.Modified;
+            try
+            {
+                await _mc.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ProductExists(key))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return Updated(update);
         }
         /// <summary>
         /// Make sure this happens because contexts are huge memory leaks
