@@ -3,10 +3,23 @@ namespace TicketSystem.Core.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialMigration : DbMigration
+    public partial class InitialIntegration : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Address",
+                c => new
+                    {
+                        Address_ID = c.Int(nullable: false, identity: true),
+                        Address_1 = c.String(maxLength: 100),
+                        Address_2 = c.String(maxLength: 100),
+                        City = c.String(maxLength: 100),
+                        GeographicalRegion = c.String(maxLength: 100),
+                        Country = c.String(maxLength: 100),
+                    })
+                .PrimaryKey(t => t.Address_ID);
+            
             CreateTable(
                 "dbo.Client",
                 c => new
@@ -22,26 +35,56 @@ namespace TicketSystem.Core.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
+                "dbo.Customer",
+                c => new
+                    {
+                        Customer_ID = c.Int(nullable: false, identity: true),
+                        Customer_Name = c.String(maxLength: 100),
+                        Billing_Address_ID = c.Int(nullable: false),
+                        Shipping_Address_ID = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Customer_ID)
+                .ForeignKey("dbo.Address", t => t.Billing_Address_ID, cascadeDelete: true)
+                .ForeignKey("dbo.Address", t => t.Shipping_Address_ID, cascadeDelete: true)
+                .Index(t => t.Billing_Address_ID)
+                .Index(t => t.Shipping_Address_ID);
+            
+            CreateTable(
                 "dbo.Event",
                 c => new
                     {
-                        Event_ID = c.Int(nullable: false),
+                        Event_ID = c.Int(nullable: false, identity: true),
                         Event_Type_ID = c.Int(nullable: false),
-                        Event_Name = c.String(),
-                        Location = c.String(),
+                        Venue_ID = c.Int(nullable: false),
+                        Event_Name = c.String(maxLength: 150),
+                        Event_Date = c.DateTimeOffset(nullable: false, precision: 7),
                     })
                 .PrimaryKey(t => t.Event_ID)
                 .ForeignKey("dbo.EventType", t => t.Event_Type_ID, cascadeDelete: true)
-                .Index(t => t.Event_Type_ID);
+                .ForeignKey("dbo.Venue", t => t.Venue_ID, cascadeDelete: true)
+                .Index(t => t.Event_Type_ID)
+                .Index(t => t.Venue_ID);
             
             CreateTable(
                 "dbo.EventType",
                 c => new
                     {
-                        Event_Type_ID = c.Int(nullable: false),
+                        Event_Type_ID = c.Int(nullable: false, identity: true),
                         Event_Type_Name = c.String(),
                     })
                 .PrimaryKey(t => t.Event_Type_ID);
+            
+            CreateTable(
+                "dbo.Venue",
+                c => new
+                    {
+                        Venue_ID = c.Int(nullable: false, identity: true),
+                        Address_ID = c.Int(nullable: false),
+                        Venue_Name = c.String(),
+                    })
+                .PrimaryKey(t => t.Venue_ID)
+                .ForeignKey("dbo.Address", t => t.Address_ID, cascadeDelete: true)
+                .Index(t => t.Address_ID);
             
             CreateTable(
                 "dbo.RefreshToken",
@@ -84,30 +127,30 @@ namespace TicketSystem.Core.Migrations
                 "dbo.TicketPurchaseLine",
                 c => new
                     {
-                        Ticket_Purchase_Line_ID = c.Int(nullable: false),
+                        Ticket_Purchase_Line_ID = c.Int(nullable: false, identity: true),
                         Ticket_Purchase_ID = c.Int(nullable: false),
                         Quantity = c.Int(nullable: false),
                         Price = c.Int(nullable: false),
                         Event_ID = c.Int(nullable: false),
-                        TicketPurchase_ID = c.Int(),
                     })
                 .PrimaryKey(t => t.Ticket_Purchase_Line_ID)
                 .ForeignKey("dbo.Event", t => t.Event_ID, cascadeDelete: true)
-                .ForeignKey("dbo.TicketPurchase", t => t.TicketPurchase_ID)
-                .Index(t => t.Event_ID)
-                .Index(t => t.TicketPurchase_ID);
+                .ForeignKey("dbo.TicketPurchase", t => t.Ticket_Purchase_ID, cascadeDelete: true)
+                .Index(t => t.Ticket_Purchase_ID)
+                .Index(t => t.Event_ID);
             
             CreateTable(
                 "dbo.TicketPurchase",
                 c => new
                     {
-                        ID = c.Int(nullable: false),
+                        Ticket_Purchase_ID = c.Int(nullable: false, identity: true),
+                        Customer_ID = c.Int(nullable: false),
                         Customer_Name = c.String(),
                         Total = c.Int(nullable: false),
                         Paid = c.Boolean(nullable: false),
                         Date = c.DateTimeOffset(nullable: false, precision: 7),
                     })
-                .PrimaryKey(t => t.ID);
+                .PrimaryKey(t => t.Ticket_Purchase_ID);
             
             CreateTable(
                 "dbo.IdentityUser",
@@ -162,17 +205,25 @@ namespace TicketSystem.Core.Migrations
             DropForeignKey("dbo.IdentityUserRole", "IdentityUser_Id", "dbo.IdentityUser");
             DropForeignKey("dbo.IdentityUserLogin", "IdentityUser_Id", "dbo.IdentityUser");
             DropForeignKey("dbo.IdentityUserClaim", "IdentityUser_Id", "dbo.IdentityUser");
-            DropForeignKey("dbo.TicketPurchaseLine", "TicketPurchase_ID", "dbo.TicketPurchase");
+            DropForeignKey("dbo.TicketPurchaseLine", "Ticket_Purchase_ID", "dbo.TicketPurchase");
             DropForeignKey("dbo.TicketPurchaseLine", "Event_ID", "dbo.Event");
             DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
+            DropForeignKey("dbo.Event", "Venue_ID", "dbo.Venue");
+            DropForeignKey("dbo.Venue", "Address_ID", "dbo.Address");
             DropForeignKey("dbo.Event", "Event_Type_ID", "dbo.EventType");
+            DropForeignKey("dbo.Customer", "Shipping_Address_ID", "dbo.Address");
+            DropForeignKey("dbo.Customer", "Billing_Address_ID", "dbo.Address");
             DropIndex("dbo.IdentityUserLogin", new[] { "IdentityUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "IdentityUser_Id" });
-            DropIndex("dbo.TicketPurchaseLine", new[] { "TicketPurchase_ID" });
             DropIndex("dbo.TicketPurchaseLine", new[] { "Event_ID" });
+            DropIndex("dbo.TicketPurchaseLine", new[] { "Ticket_Purchase_ID" });
             DropIndex("dbo.IdentityUserRole", new[] { "IdentityUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "IdentityRole_Id" });
+            DropIndex("dbo.Venue", new[] { "Address_ID" });
+            DropIndex("dbo.Event", new[] { "Venue_ID" });
             DropIndex("dbo.Event", new[] { "Event_Type_ID" });
+            DropIndex("dbo.Customer", new[] { "Shipping_Address_ID" });
+            DropIndex("dbo.Customer", new[] { "Billing_Address_ID" });
             DropTable("dbo.IdentityUserLogin");
             DropTable("dbo.IdentityUserClaim");
             DropTable("dbo.IdentityUser");
@@ -181,9 +232,12 @@ namespace TicketSystem.Core.Migrations
             DropTable("dbo.IdentityUserRole");
             DropTable("dbo.IdentityRole");
             DropTable("dbo.RefreshToken");
+            DropTable("dbo.Venue");
             DropTable("dbo.EventType");
             DropTable("dbo.Event");
+            DropTable("dbo.Customer");
             DropTable("dbo.Client");
+            DropTable("dbo.Address");
         }
     }
 }

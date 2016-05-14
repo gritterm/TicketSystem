@@ -61,21 +61,9 @@
     <Compile Include="Framework\Helper.cs" />
     <Compile Include="Framework\ObservableListSource.cs" />
     <Compile Include="Interfaces\IEntity.cs" />
-    <Compile Include="Migrations\201605122340240_CustomerAndAddressAddition.cs" />
-    <Compile Include="Migrations\201605122340240_CustomerAndAddressAddition.Designer.cs">
-      <DependentUpon>201605122340240_CustomerAndAddressAddition.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605131109071_CustomerAndAddressUpdate.cs" />
-    <Compile Include="Migrations\201605131109071_CustomerAndAddressUpdate.Designer.cs">
-      <DependentUpon>201605131109071_CustomerAndAddressUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605131139223_AddVenueAndSwitchToIdentities.cs" />
-    <Compile Include="Migrations\201605131139223_AddVenueAndSwitchToIdentities.Designer.cs">
-      <DependentUpon>201605131139223_AddVenueAndSwitchToIdentities.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605140106068_VendorAddition.cs" />
-    <Compile Include="Migrations\201605140106068_VendorAddition.Designer.cs">
-      <DependentUpon>201605140106068_VendorAddition.cs</DependentUpon>
+    <Compile Include="Migrations\201605140117318_InitialIntegration.cs" />
+    <Compile Include="Migrations\201605140117318_InitialIntegration.Designer.cs">
+      <DependentUpon>201605140117318_InitialIntegration.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Address.cs" />
     <Compile Include="Model\Client.cs" />
@@ -83,10 +71,6 @@
     <Compile Include="Model\Enums.cs" />
     <Compile Include="Model\Event.cs" />
     <Compile Include="Model\EventType.cs" />
-    <Compile Include="Migrations\201605072102477_InitialMigration.cs" />
-    <Compile Include="Migrations\201605072102477_InitialMigration.Designer.cs">
-      <DependentUpon>201605072102477_InitialMigration.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelContext.cs" />
     <Compile Include="Model\RefreshToken.cs" />
@@ -102,20 +86,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201605072102477_InitialMigration.resx">
-      <DependentUpon>201605072102477_InitialMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605122340240_CustomerAndAddressAddition.resx">
-      <DependentUpon>201605122340240_CustomerAndAddressAddition.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605131109071_CustomerAndAddressUpdate.resx">
-      <DependentUpon>201605131109071_CustomerAndAddressUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605131139223_AddVenueAndSwitchToIdentities.resx">
-      <DependentUpon>201605131139223_AddVenueAndSwitchToIdentities.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605140106068_VendorAddition.resx">
-      <DependentUpon>201605140106068_VendorAddition.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201605140117318_InitialIntegration.resx">
+      <DependentUpon>201605140117318_InitialIntegration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

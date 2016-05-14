@@ -13,13 +13,8 @@ namespace TicketSystem.Core.Model
         [MaxLength(100)]
         public string Vendor_Name { get; set; }
 
-        public int Buy_From_Address_ID { get; set; }
-        public int Pay_To_Address_ID { get; set; }
-
-        [ForeignKey("Buy_From_Address_ID")]
         public virtual Address Buy_From_Address { get; set; }
 
-        [ForeignKey("Pay_To_Address_ID")]
         public virtual Address Pay_To_Address { get; set; }
     }
 }
