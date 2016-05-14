@@ -12,6 +12,10 @@
             "name": "services"
         },
         {
+            "path": "directives",
+            "name": "directives"
+        },
+        {
             "path": "views",
             "name": "views"
         }

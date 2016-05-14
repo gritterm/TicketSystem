@@ -2,10 +2,10 @@
 app.controller('ordersController', ['$scope', 'ordersService', function ($scope, ordersService) {
 
     $scope.orders = [];
-
+    $scope.gridoptions = [];
     ordersService.getOrders().then(function (results) {
 
-        $scope.orders = results.data;
+        $scope.gridoptions = results.data;
 
     }, function (error) {
         alert(error.data.message);
