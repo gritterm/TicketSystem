@@ -61,9 +61,9 @@
     <Compile Include="Framework\Helper.cs" />
     <Compile Include="Framework\ObservableListSource.cs" />
     <Compile Include="Interfaces\IEntity.cs" />
-    <Compile Include="Migrations\201605140117318_InitialIntegration.cs" />
-    <Compile Include="Migrations\201605140117318_InitialIntegration.Designer.cs">
-      <DependentUpon>201605140117318_InitialIntegration.cs</DependentUpon>
+    <Compile Include="Migrations\201605140128431_InitialMigration.cs" />
+    <Compile Include="Migrations\201605140128431_InitialMigration.Designer.cs">
+      <DependentUpon>201605140128431_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Address.cs" />
     <Compile Include="Model\Client.cs" />
@@ -86,8 +86,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201605140117318_InitialIntegration.resx">
-      <DependentUpon>201605140117318_InitialIntegration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201605140128431_InitialMigration.resx">
+      <DependentUpon>201605140128431_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

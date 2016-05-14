@@ -23,11 +23,10 @@ namespace TicketSystem.Core.Model
 
         public int Shipping_Address_ID { get; set; }
 
-
         [ForeignKey("Billing_Address_ID")]
-        public virtual Address Billing_Address { get; set; }
+        public virtual Address BillingAddress { get; set; }
 
         [ForeignKey("Shipping_Address_ID")]
-        public virtual Address Shipping_Address { get; set; }
+        public virtual Address ShippingAddress { get; set; }
     }
 }

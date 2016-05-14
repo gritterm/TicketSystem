@@ -19,9 +19,11 @@ namespace TicketSystem.Core.Model
         public int Venue_ID { get; set; }
         [MaxLength(150)]
         public string Event_Name { get; set; }
-        public DateTimeOffset Event_Date { get; set; }
+        public DateTimeOffset? Event_Date { get; set; }
 
+        [ForeignKey("Event_Type_ID")]
         public virtual EventType EventType { get; set; }
+        [ForeignKey("Venue_ID")]
         public virtual Venue Venue { get; set; }
     }
 }

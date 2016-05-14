@@ -17,9 +17,13 @@ namespace TicketSystem.Core.Model
         public int Ticket_Purchase_ID { get; set; }
         public int Quantity { get; set; }
         public int Price { get; set; }
-        public int Event_ID { get; set; }
+        public int? Event_ID { get; set; }
 
+        [ForeignKey("Event_ID")]
         public virtual Event Event { get; set; }
+
+        [ForeignKey("Ticket_Purchase_ID")]
+        public virtual TicketPurchase TicketPurchase { get; set; }
         //Ticket Purchase Line _ID, Ticket_Purchase_ID, Event ID, Qty, Price 
     }
 }

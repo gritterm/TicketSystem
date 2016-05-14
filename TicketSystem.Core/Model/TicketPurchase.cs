@@ -14,11 +14,14 @@ namespace TicketSystem.Core.Model
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int Ticket_Purchase_ID { get; set; }
-        public int Customer_ID { get; set; }
+        public int? Customer_ID { get; set; }
         public string Customer_Name { get; set; }
         public int Total { get; set; }
         public bool Paid { get; set; }
         public DateTimeOffset Date { get; set; }
+
+        [ForeignKey("Customer_ID")]
+        public virtual Customer Customer {get; set;}
 
         [ForeignKey("Ticket_Purchase_ID")]
         public virtual ObservableListSource<TicketPurchaseLine> TicketPurchaseLines { get; set; }
