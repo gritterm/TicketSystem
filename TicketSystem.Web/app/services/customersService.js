@@ -7,7 +7,7 @@ app.factory('customersService', ['$http', 'ngAuthSettings', function ($http, ngA
 
     var _getCustomers = function () {
 
-        return $http.get(serviceBase + 'api/customers').then(function (results) {
+        return $http.get(serviceBase + 'odata/customers').then(function (results) {
             return results;
         });
     };
