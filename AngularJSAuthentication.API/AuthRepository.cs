@@ -1,4 +1,4 @@
-﻿using AngularJSAuthentication.API.Models;
+﻿using TicketSystem.API.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
@@ -11,7 +11,7 @@ using System.Web;
 using TicketSystem.Core;
 using TicketSystem.Core.Model;
 
-namespace AngularJSAuthentication.API
+namespace TicketSystem.API
 {
 
     public class AuthRepository : IDisposable

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Web;
 using TicketSystem.Core.Model;
 
-namespace AngularJSAuthentication.API.Providers
+namespace TicketSystem.API.Providers
 {
     public class SimpleAuthorizationServerProvider : OAuthAuthorizationServerProvider
     {

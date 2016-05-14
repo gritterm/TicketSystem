@@ -1,4 +1,4 @@
-﻿using AngularJSAuthentication.API.Providers;
+﻿using TicketSystem.API.Providers;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Facebook;
 using Microsoft.Owin.Security.Google;
@@ -12,9 +12,9 @@ using System.Web;
 using System.Web.Http;
 using TicketSystem.Core;
 
-[assembly: OwinStartup(typeof(AngularJSAuthentication.API.Startup))]
+[assembly: OwinStartup(typeof(TicketSystem.API.Startup))]
 
-namespace AngularJSAuthentication.API
+namespace TicketSystem.API
 {
     public class Startup
     {

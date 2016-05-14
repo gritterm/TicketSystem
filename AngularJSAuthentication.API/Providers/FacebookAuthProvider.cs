@@ -6,7 +6,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace AngularJSAuthentication.API.Providers
+namespace TicketSystem.API.Providers
 {
     public class FacebookAuthProvider : FacebookAuthenticationProvider
     {

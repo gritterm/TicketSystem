@@ -73,6 +73,10 @@
     <Compile Include="Migrations\201605131139223_AddVenueAndSwitchToIdentities.Designer.cs">
       <DependentUpon>201605131139223_AddVenueAndSwitchToIdentities.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605140106068_VendorAddition.cs" />
+    <Compile Include="Migrations\201605140106068_VendorAddition.Designer.cs">
+      <DependentUpon>201605140106068_VendorAddition.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Address.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Customer.cs" />
@@ -87,6 +91,7 @@
     <Compile Include="ModelContext.cs" />
     <Compile Include="Model\RefreshToken.cs" />
     <Compile Include="Model\TicketReceipt.cs" />
+    <Compile Include="Model\Vendor.cs" />
     <Compile Include="Model\Venue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\TicketPurchase.cs" />
@@ -108,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605131139223_AddVenueAndSwitchToIdentities.resx">
       <DependentUpon>201605131139223_AddVenueAndSwitchToIdentities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605140106068_VendorAddition.resx">
+      <DependentUpon>201605140106068_VendorAddition.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

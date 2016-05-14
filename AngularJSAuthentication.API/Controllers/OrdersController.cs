@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Security.Claims;
 using System.Web.Http;
 
-namespace AngularJSAuthentication.API.Controllers
+namespace TicketSystem.API.Controllers
 {
     //[RoutePrefix("api/Orders")]
     //public class OrdersController : ApiController

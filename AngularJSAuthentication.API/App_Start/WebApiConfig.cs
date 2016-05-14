@@ -9,7 +9,7 @@ using System.Web.OData.Builder;
 using System.Web.OData.Extensions;
 using TicketSystem.Core.Model;
 
-namespace AngularJSAuthentication.API
+namespace TicketSystem.API
 {
     public static class WebApiConfig
     {

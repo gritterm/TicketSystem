@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 
-namespace AngularJSAuthentication.API.Results
+namespace TicketSystem.API.Results
 {
     public class ChallengeResult : IHttpActionResult
     {        

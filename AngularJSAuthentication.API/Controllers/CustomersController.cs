@@ -10,7 +10,7 @@ using System.Web.OData;
 using TicketSystem.Core;
 using TicketSystem.Core.Model;
 
-namespace AngularJSAuthentication.API.Controllers
+namespace TicketSystem.API.Controllers
 {
     [EnableQuery]
     public class CustomersController : ODataController
