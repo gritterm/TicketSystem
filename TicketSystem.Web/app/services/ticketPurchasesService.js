@@ -18,7 +18,7 @@ app.factory('ticketPurchasesService', ['$http', 'ngAuthSettings', function ($htt
       });
     }
     ticketPurchasesServiceFactory.getTickets = _getTicketPurchases;
-    ticketPurchasesServiceFactory.newCustomer = _newTicket;
+    ticketPurchasesServiceFactory.newTicket = _newTicket;
     return ticketPurchasesServiceFactory;
 
 }]);

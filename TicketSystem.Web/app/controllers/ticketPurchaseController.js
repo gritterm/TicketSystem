@@ -1,5 +1,5 @@
 'use strict';
-app.controller('ticketPurchaseSearchController', ['$scope', 'ticketPurchasesService', function ($scope, ticketPurchasesService) {
+app.controller('ticketPurchaseController', ['$scope', 'ticketPurchasesService', function ($scope, ticketPurchasesService) {
 
     $scope.searchoptions = {};
     $scope.searchoptions.newEntityName = "New Ticket Purchase";
