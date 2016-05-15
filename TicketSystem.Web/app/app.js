@@ -23,9 +23,14 @@ app.config(function ($routeProvider) {
         templateUrl: "/app/views/customerSearch.html"
     });
 
-      $routeProvider.when("/ticketPurchases", {
+    $routeProvider.when("/ticketPurchases", {
         controller: "ticketPurchaseSearchController",
         templateUrl: "/app/views/ticketPurchaseSearch.html"
+    });
+
+    $routeProvider.when("/Customer/:customerId" , {
+        controller: "customerController",
+        templateUrl: "/app/views/customerCard.html"
     });
 
     $routeProvider.when("/orders", {

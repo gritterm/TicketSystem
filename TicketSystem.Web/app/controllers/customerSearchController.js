@@ -1,5 +1,5 @@
 'use strict';
-app.controller('customerSearchController', ['$scope', 'customersService', function ($scope, customersService) {
+app.controller('customerSearchController', ['$scope', '$route', 'customersService', function ($scope, $route,customersService) {
 
     $scope.customers = [];
     $scope.searchoptions = {};
@@ -13,10 +13,6 @@ app.controller('customerSearchController', ['$scope', 'customersService', functi
     {
         name: 'Customer_Email'
     }];
-    $scope.cardColumnLink = "Customer_ID";
-    $scope.cardLinkTemplate = '<div>' +
-                   '<a href="http://stackoverflow.com">Click me</a>' +
-                   '</div>'
     $scope.newCustomer = {
     };
 
@@ -34,7 +30,11 @@ app.controller('customerSearchController', ['$scope', 'customersService', functi
 
     function saveCustomer()
     {
-        customersService.newCustomer($scope.newCustomer);
+        customersService.newCustomer($scope.newCustomer).then(function(results) {
+            $('#myModal').modal('hide')
+            var customer = results.data;
+            window.location = 'http://localhost:32150/#/Customer/' + customer.Customer_ID
+        });
     }
 
 }]);
