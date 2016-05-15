@@ -4,9 +4,9 @@ app.directive('searchDirective', function() {
   return {
       restrict: 'AE',
       scope:{
-        gridoptions : '='
+        searchOptions : '='
       },
-      template: '<div ui-grid="{data: gridoptions}" class="myGrid"></div>',
+      template: '<button ng-click="searchOptions.newEntityAction()">{{searchOptions.newEntityName}}</button><div ui-grid="{data: searchOptions.gridData}" class="myGrid"></div>',
       link: function(scope, elem, attrs) {
         
       }
