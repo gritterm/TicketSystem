@@ -17,7 +17,12 @@ namespace TicketSystem.Core.Model
         public int Customer_ID { get; set; }
 
         [MaxLength(100)]
+        [Required]
         public string Customer_Name { get; set; }
+
+        [MaxLength(100)]
+        [Required]
+        public string Customer_Email { get; set; }
 
         public int? Billing_Address_ID { get; set; }
 

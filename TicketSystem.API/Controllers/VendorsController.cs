@@ -10,48 +10,48 @@ using System.Web.OData;
 using TicketSystem.Core;
 using TicketSystem.Core.Model;
 
-namespace TicketSystem.API.Controllers
+namespace TicketSystem.Server.Controllers
 {
     [EnableQuery]
-    public class CustomersController : ODataController
+    public class VendorsController : ODataController
     {
         private ModelContext _mc = new ModelContext();
 
-        private bool CustomerExists(int key)
+        private bool VendorExists(int key)
         {
-            return _mc.Customers.Any(p => p.Customer_ID == key);
+            return _mc.Vendors.Any(p => p.Vendor_ID == key);
         }
 
-        public IQueryable<Customer> Get()
+        public IQueryable<Vendor> Get()
         {
             //if i had a multi-tenant db I would filter all results here
-            return _mc.Customers;
+            return _mc.Vendors;
         }
 
-        public SingleResult<Customer> Get([FromODataUri] int key)
+        public SingleResult<Vendor> Get([FromODataUri] int key)
         {
-            IQueryable<Customer> result = _mc.Customers.Where(p => p.Customer_ID == key);
+            IQueryable<Vendor> result = _mc.Vendors.Where(p => p.Vendor_ID == key);
             return SingleResult.Create(result);
         }
 
-        public async Task<IHttpActionResult> Post(Customer customer)
+        public async Task<IHttpActionResult> Post(Vendor Vendor)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            _mc.Customers.Add(customer);
+            _mc.Vendors.Add(Vendor);
             await _mc.SaveChangesAsync();
-            return Created(customer);
+            return Created(Vendor);
         }
 
-        public async Task<IHttpActionResult> Put([FromODataUri] int key, Customer update)
+        public async Task<IHttpActionResult> Put([FromODataUri] int key, Vendor update)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            if (key != update.Customer_ID)
+            if (key != update.Vendor_ID)
             {
                 return BadRequest();
             }
@@ -62,7 +62,7 @@ namespace TicketSystem.API.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CustomerExists(key))
+                if (!VendorExists(key))
                 {
                     return NotFound();
                 }

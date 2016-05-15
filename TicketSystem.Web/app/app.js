@@ -19,8 +19,8 @@ app.config(function ($routeProvider) {
     });
 
      $routeProvider.when("/customerSearch", {
-        controller: "signupController",
-        templateUrl: "/app/views/signup.html"
+        controller: "customerSearchController",
+        templateUrl: "/app/views/customerSearch.html"
     });
 
     $routeProvider.when("/orders", {

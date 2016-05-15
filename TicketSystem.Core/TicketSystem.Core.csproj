@@ -65,6 +65,14 @@
     <Compile Include="Migrations\201605141405135_InitMigration.Designer.cs">
       <DependentUpon>201605141405135_InitMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605150137343_CustomerNameRequired.cs" />
+    <Compile Include="Migrations\201605150137343_CustomerNameRequired.Designer.cs">
+      <DependentUpon>201605150137343_CustomerNameRequired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605151829034_AddCustomerName.cs" />
+    <Compile Include="Migrations\201605151829034_AddCustomerName.Designer.cs">
+      <DependentUpon>201605151829034_AddCustomerName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Address.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Customer.cs" />
@@ -88,6 +96,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201605141405135_InitMigration.resx">
       <DependentUpon>201605141405135_InitMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605150137343_CustomerNameRequired.resx">
+      <DependentUpon>201605150137343_CustomerNameRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605151829034_AddCustomerName.resx">
+      <DependentUpon>201605151829034_AddCustomerName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

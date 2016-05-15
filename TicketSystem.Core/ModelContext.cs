@@ -32,8 +32,7 @@ namespace TicketSystem.Core
         public DbSet<RefreshToken> RefreshTokens { get; set; }
         public DbSet<Vendor> Vendors { get; set; }
         public DbSet<TicketReceipt> TicketReceipts { get; set; }
-
-
+        public DbSet<Venue> Venues { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

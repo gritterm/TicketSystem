@@ -10,48 +10,48 @@ using System.Web.OData;
 using TicketSystem.Core;
 using TicketSystem.Core.Model;
 
-namespace TicketSystem.API.Controllers
+namespace TicketSystem.Server.Controllers
 {
     [EnableQuery]
-    public class CustomersController : ODataController
+    public class EventsController : ODataController
     {
         private ModelContext _mc = new ModelContext();
 
-        private bool CustomerExists(int key)
+        private bool EventExists(int key)
         {
-            return _mc.Customers.Any(p => p.Customer_ID == key);
+            return _mc.Events.Any(p => p.Event_ID == key);
         }
 
-        public IQueryable<Customer> Get()
+        public IQueryable<Event> Get()
         {
             //if i had a multi-tenant db I would filter all results here
-            return _mc.Customers;
+            return _mc.Events;
         }
 
-        public SingleResult<Customer> Get([FromODataUri] int key)
+        public SingleResult<Event> Get([FromODataUri] int key)
         {
-            IQueryable<Customer> result = _mc.Customers.Where(p => p.Customer_ID == key);
+            IQueryable<Event> result = _mc.Events.Where(p => p.Event_ID == key);
             return SingleResult.Create(result);
         }
 
-        public async Task<IHttpActionResult> Post(Customer customer)
+        public async Task<IHttpActionResult> Post(Event Event)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            _mc.Customers.Add(customer);
+            _mc.Events.Add(Event);
             await _mc.SaveChangesAsync();
-            return Created(customer);
+            return Created(Event);
         }
 
-        public async Task<IHttpActionResult> Put([FromODataUri] int key, Customer update)
+        public async Task<IHttpActionResult> Put([FromODataUri] int key, Event update)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            if (key != update.Customer_ID)
+            if (key != update.Event_ID)
             {
                 return BadRequest();
             }
@@ -62,7 +62,7 @@ namespace TicketSystem.API.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CustomerExists(key))
+                if (!EventExists(key))
                 {
                     return NotFound();
                 }

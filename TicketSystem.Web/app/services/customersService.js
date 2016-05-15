@@ -7,13 +7,18 @@ app.factory('customersService', ['$http', 'ngAuthSettings', function ($http, ngA
 
     var _getCustomers = function () {
 
-        return $http.get(serviceBase + 'odata/customers').then(function (results) {
+        return $http.get(serviceBase + 'odata/Customers').then(function (results) {
             return results;
         });
     };
-
+    var _newCustomer = function(newCustomer)
+    {
+      return $http.post(serviceBase + 'odata/Customers', newCustomer).then(function(results){
+        return results;
+      });
+    }
     customersServiceFactory.getCustomers = _getCustomers;
-
+    customersServiceFactory.newCustomer = _newCustomer;
     return customersServiceFactory;
 
 }]);

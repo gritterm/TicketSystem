@@ -10,48 +10,48 @@ using System.Web.OData;
 using TicketSystem.Core;
 using TicketSystem.Core.Model;
 
-namespace TicketSystem.API.Controllers
+namespace TicketSystem.Server.Controllers
 {
     [EnableQuery]
-    public class CustomersController : ODataController
+    public class TicketReceiptsController : ODataController
     {
         private ModelContext _mc = new ModelContext();
 
-        private bool CustomerExists(int key)
+        private bool TicketReceiptExists(int key)
         {
-            return _mc.Customers.Any(p => p.Customer_ID == key);
+            return _mc.TicketReceipts.Any(p => p.Ticket_Receipt_ID == key);
         }
 
-        public IQueryable<Customer> Get()
+        public IQueryable<TicketReceipt> Get()
         {
             //if i had a multi-tenant db I would filter all results here
-            return _mc.Customers;
+            return _mc.TicketReceipts;
         }
 
-        public SingleResult<Customer> Get([FromODataUri] int key)
+        public SingleResult<TicketReceipt> Get([FromODataUri] int key)
         {
-            IQueryable<Customer> result = _mc.Customers.Where(p => p.Customer_ID == key);
+            IQueryable<TicketReceipt> result = _mc.TicketReceipts.Where(p => p.Ticket_Receipt_ID == key);
             return SingleResult.Create(result);
         }
 
-        public async Task<IHttpActionResult> Post(Customer customer)
+        public async Task<IHttpActionResult> Post(TicketReceipt TicketReceipt)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            _mc.Customers.Add(customer);
+            _mc.TicketReceipts.Add(TicketReceipt);
             await _mc.SaveChangesAsync();
-            return Created(customer);
+            return Created(TicketReceipt);
         }
 
-        public async Task<IHttpActionResult> Put([FromODataUri] int key, Customer update)
+        public async Task<IHttpActionResult> Put([FromODataUri] int key, TicketReceipt update)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            if (key != update.Customer_ID)
+            if (key != update.Ticket_Receipt_ID)
             {
                 return BadRequest();
             }
@@ -62,7 +62,7 @@ namespace TicketSystem.API.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CustomerExists(key))
+                if (!TicketReceiptExists(key))
                 {
                     return NotFound();
                 }

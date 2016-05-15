@@ -2,14 +2,14 @@
 app.controller('ordersController', ['$scope', 'ordersService', function ($scope, ordersService) {
 
     $scope.orders = [];
-    $scope.gridoptions = {};
-    $scope.gridoptions.newEntityName = "New Order";
-    $scope.gridoptions.newEntityAction = function(){
-      
+    $scope.searchoptions = {};
+    $scope.searchoptions.newEntityName = "New Order";
+    $scope.searchoptions.newEntityAction = function(){
+
     };
     ordersService.getOrders().then(function (results) {
 
-        $scope.gridoptions.gridData = results.data;
+        $scope.searchoptions.gridData = results.data;
 
     }, function (error) {
         alert(error.data.message);

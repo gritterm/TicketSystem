@@ -159,9 +159,17 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="AuthRepository.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AddressesController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
+    <Compile Include="Controllers\EventTypesController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\RefreshTokensController.cs" />
+    <Compile Include="Controllers\TicketPurchaseLinesController.cs" />
+    <Compile Include="Controllers\TicketPurchasesController.cs" />
+    <Compile Include="Controllers\TicketReceiptsController.cs" />
+    <Compile Include="Controllers\VendorsController.cs" />
+    <Compile Include="Controllers\VenuesController.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Models\Enums.cs" />
     <Compile Include="Models\ExternalLoginModels.cs" />
@@ -186,7 +194,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TicketSystem.Core\TicketSystem.Core.csproj">
