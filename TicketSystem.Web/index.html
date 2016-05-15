@@ -28,7 +28,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li data-ng-hide="!authentication.isAuth"><a href="#">Welcome {{authentication.userName}}</a></li>
                     <li data-ng-hide="!authentication.isAuth"><a href="#/orders">My Orders</a></li>
-                    <li data-ng-hide="!authentication.isAuth"><a href="#/customerSearch">Customer Search</a></li>
+                    <li data-ng-hide="!authentication.isAuth"><a href="#/customerSearch">Customers</a></li>
+                     <li data-ng-hide="!authentication.isAuth"><a href="#/ticketPurchases">Ticket Purchases</a></li>
                     <li data-ng-hide="!authentication.isAuth"><a href="" data-ng-click="logOut()">Logout</a></li>
                     <li data-ng-hide="authentication.isAuth"> <a href="#/login">Login</a></li>
                     <li data-ng-hide="authentication.isAuth"> <a href="#/signup">Sign Up</a></li>
@@ -43,7 +44,7 @@
 
     <hr />
 
-    <div id="footer">
+    <!-- <div id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -54,7 +55,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- 3rd party libraries -->
 
@@ -73,6 +74,7 @@
     <script src="app/services/authService.js?v=2"></script>
     <script src="app/services/ordersService.js?v=2"></script>
     <script src="app/services/customersService.js?v=2"></script>
+    <script src="app/services/ticketPurchasesService.js?v=2"></script>
     <script src="app/services/tokensManagerService.js?v=2"></script>
     <!-- Ui-Grid -->    
     <link rel="styleSheet" href="node_modules/angular-ui-grid/ui-grid.min.css"/>
@@ -84,6 +86,7 @@
     <script src="app/controllers/signupController.js?v=2"></script>
     <script src="app/controllers/ordersController.js?v=2"></script>
     <script src="app/controllers/customerSearchController.js?v=2"></script>
+    <script src="app/controllers/ticketPurchaseSearchController.js?v=2"></script>
     <script src="app/controllers/refreshController.js?v=2"></script>
     <script src="app/controllers/tokensManagerController.js?v=2"></script>
     <script src="app/controllers/associateController.js?v=2"></script>
