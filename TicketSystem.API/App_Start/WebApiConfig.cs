@@ -28,10 +28,13 @@ namespace TicketSystem.API
 
             ODataModelBuilder builder = new ODataConventionModelBuilder();
             builder.ContainerName = "DefaultContainer";
+            builder.EntitySet<Address>("Addresses");
             builder.EntitySet<Customer>("Customers");
             builder.EntitySet<Event>("Events");
             builder.EntitySet<EventType>("EventTypes");
+            builder.EntitySet<Venue>("Venues");
             builder.EntitySet<TicketPurchase>("TicketPurchases");
+            builder.EntitySet<TicketPurchaseLine>("TicketPurchaseLines");
             config.MapODataServiceRoute(
                 "odata",
                 "odata",

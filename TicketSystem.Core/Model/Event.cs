@@ -15,10 +15,21 @@ namespace TicketSystem.Core.Model
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int Event_ID { get; set; }
+
+        [Required]
         public int Event_Type_ID { get; set; }
+
+        [Required]
         public int Venue_ID { get; set; }
+
+        [MaxLength(150)]
+        public string Venue_Name { get; set; }
+
         [MaxLength(150)]
         public string Event_Name { get; set; }
+
+        [MaxLength(150)]
+        public string Event_Type_Name { get; set; }
         public DateTimeOffset? Event_Date { get; set; }
 
         [ForeignKey("Event_Type_ID")]

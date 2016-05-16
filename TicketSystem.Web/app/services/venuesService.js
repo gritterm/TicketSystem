@@ -1,9 +1,9 @@
 'use strict';
-app.factory('venueService', ['$http', 'ngAuthSettings', function ($http, ngAuthSettings) {
+app.factory('venuesService', ['$http', 'ngAuthSettings', function ($http, ngAuthSettings) {
 
     var serviceBase = ngAuthSettings.apiServiceBaseUri;
 
-    var venuevenuevesServiceFactory = {};
+    var venuesServiceFactory = {};
 
     var _getVenues = function () {
 

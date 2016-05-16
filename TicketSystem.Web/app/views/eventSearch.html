@@ -1,0 +1,28 @@
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">New Event</h4>
+      </div>
+      <div class="modal-body">
+        <input ng-model="newEvent.Event_Name"/> 
+        <input type="date" ng-model="newEvent.Event_Date"   />     
+        
+        <ui-select ng-model="newEvent.Event_Type_ID">
+          <ui-select-match>
+              <span ng-bind="$select.newEvent.Event_Type_Name"></span>
+          </ui-select-match>
+          <ui-select-choices repeat="eventType in (eventTypes | filter: $select.search) track by eventType.Event_Type_ID">
+              <span ng-bind="eventType.Event_Type_Name"></span>
+          </ui-select-choices>
+        </ui-select> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" ng-click="saveEvent()" class="btn btn-primary">Create Event</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div search-directive search-options="searchoptions"></div>
