@@ -60,6 +60,10 @@
   <ItemGroup>
     <Content Include="app\controllers\associateController.js" />
     <Content Include="app\controllers\customerSearchController.js" />
+    <Content Include="app\controllers\eventController.js" />
+    <Content Include="app\controllers\eventSearchController.js" />
+    <Content Include="app\controllers\eventTypeController.js" />
+    <Content Include="app\controllers\eventTypeSearchController.js" />
     <Content Include="app\controllers\homeController.js" />
     <Content Include="app\controllers\indexController.js" />
     <Content Include="app\controllers\loginController.js" />
@@ -68,12 +72,17 @@
     <Content Include="app\controllers\signupController.js" />
     <Content Include="app\controllers\ticketPurchaseSearchController.js" />
     <Content Include="app\controllers\tokensManagerController.js" />
+    <Content Include="app\controllers\venueController.js" />
+    <Content Include="app\controllers\venueSearchController.js" />
     <Content Include="app\services\authInterceptorService.js" />
     <Content Include="app\services\authService.js" />
     <Content Include="app\services\customersService.js" />
+    <Content Include="app\services\eventService.js" />
+    <Content Include="app\services\eventTypeService.js" />
     <Content Include="app\services\ordersService.js" />
-    <Content Include="app\services\ticketPurchaseSearchController.js" />
+    <Content Include="app\services\ticketPurchasesService.js" />
     <Content Include="app\services\tokensManagerService.js" />
+    <Content Include="app\services\venueService.js" />
     <Content Include="app\views\associate.html" />
     <Content Include="app\views\customerSearch.html" />
     <Content Include="app\views\home.html" />

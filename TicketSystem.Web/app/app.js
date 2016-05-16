@@ -33,14 +33,24 @@ app.config(function ($routeProvider) {
         templateUrl: "/app/views/customerCard.html"
     });
 
-    $routeProvider.when("/orders", {
-        controller: "ordersController",
-        templateUrl: "/app/views/orders.html"
-    });
-
     $routeProvider.when("/refresh", {
         controller: "refreshController",
         templateUrl: "/app/views/refresh.html"
+    });
+
+    $routeProvider.when("/venues", {
+        controller: "venueSearchController",
+        templateUrl: "/app/views/venueSearch.html"
+    });
+
+    $routeProvider.when("/eventTypes", {
+        controller: "eventTypeSearchController",
+        templateUrl: "/app/views/eventTypeSearch.html"
+    });
+
+    $routeProvider.when("/events", {
+        controller: "eventSearchController",
+        templateUrl: "/app/views/eventSearch.html"
     });
 
     $routeProvider.when("/tokens", {
