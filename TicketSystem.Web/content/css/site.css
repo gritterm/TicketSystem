@@ -34,6 +34,10 @@ body {
     padding: 0px 15px 5px 15px;
     margin: 0 auto;
 }
+
+.viewcontainter{
+    padding-top: 15px;
+}
 .form-login {
     max-width: 330px;
     padding: 0px 15px 5px 15px;

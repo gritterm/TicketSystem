@@ -9,7 +9,7 @@ app.controller('ticketPurchaseController',
   
     ticketPurchasesService.getTicketWithLines(ticketId).then(function (results) {
         $scope.ticketPurchase = results.data;
-
+        
     }, function (error) {
         //alert(error.data.message);
     });
