@@ -77,6 +77,10 @@
     <Compile Include="Migrations\201605160046491_UpdateEventModel.Designer.cs">
       <DependentUpon>201605160046491_UpdateEventModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605170032213_RenameTicketPurchaseDate.cs" />
+    <Compile Include="Migrations\201605170032213_RenameTicketPurchaseDate.Designer.cs">
+      <DependentUpon>201605170032213_RenameTicketPurchaseDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Address.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Customer.cs" />
@@ -109,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605160046491_UpdateEventModel.resx">
       <DependentUpon>201605160046491_UpdateEventModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605170032213_RenameTicketPurchaseDate.resx">
+      <DependentUpon>201605170032213_RenameTicketPurchaseDate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

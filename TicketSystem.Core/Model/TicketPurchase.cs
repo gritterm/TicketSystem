@@ -18,13 +18,13 @@ namespace TicketSystem.Core.Model
         public string Customer_Name { get; set; }
         public int Total { get; set; }
         public bool Paid { get; set; }
-        public DateTimeOffset Date { get; set; }
+        public DateTimeOffset Ticket_Purchase_Date { get; set; }
 
         [ForeignKey("Customer_ID")]
         public virtual Customer Customer {get; set;}
 
         [ForeignKey("Ticket_Purchase_ID")]
-        public virtual ObservableListSource<TicketPurchaseLine> TicketPurchaseLines { get; set; }
-        // Customer Name, Total, Paid, Date, Credit Card # 
+        public virtual ICollection<TicketPurchaseLine> TicketPurchaseLines { get; set; }
+        // Customer Name, Total, Paid, Date
     }
 }

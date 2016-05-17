@@ -11,6 +11,12 @@ app.factory('ticketPurchasesService', ['$http', 'ngAuthSettings', function ($htt
             return results;
         });
     };
+    var _getTicketWithLines = function (ticketPurchaseID) {
+        return $http.get(serviceBase + 'odata/TicketPurchases?key=' + ticketPurchaseID
+            + '$&expand=TicketPurchaseLines').then(function (results) {
+            return results;
+        });
+    }
     var _newTicket = function()
     {
       return $http.post(serviceBase + 'odata/TicketPurchases', {}).then(function(results){
@@ -19,6 +25,7 @@ app.factory('ticketPurchasesService', ['$http', 'ngAuthSettings', function ($htt
     }
     ticketPurchasesServiceFactory.getTickets = _getTicketPurchases;
     ticketPurchasesServiceFactory.newTicket = _newTicket;
+    ticketPurchasesService.getTicketWithLines = _getTicketWithLines;
     return ticketPurchasesServiceFactory;
 
 }]);

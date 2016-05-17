@@ -1,24 +1,32 @@
 'use strict';
-app.controller('ticketPurchaseController', ['$scope', 'ticketPurchasesService', function ($scope, ticketPurchasesService) {
-
-    $scope.searchoptions = {};
+app.controller('ticketPurchaseController', 
+    ['$routeParams','$scope', 'ticketPurchasesService', 'customersService', 'eventsService',
+ function ($scope, ticketPurchasesService, customersService, eventsService) {
+    var ticketId = $routeParams.ticketId;
     $scope.searchoptions.newEntityName = "New Ticket Purchase";
 
     $scope.saveTicketPurchase = saveTicketPurchase;
 
-    $scope.searchoptions.newEntityAction = function(){
-        $('#myModal').modal('show')
-    };  
-    ticketPurchasesService.getTickets().then(function (results) {
-        $scope.searchoptions.gridData = results.data.value;
+  
+    ticketPurchasesService.getTicketWithLines(ticketId).then(function (results) {
+        $scope.ticketPurchase = results.data;
 
     }, function (error) {
         //alert(error.data.message);
     });
 
-    function saveTicketPurchase()
-    {
-        ticketPurchasesService.newTicketPurchase();
-    }
+     customersService.getCustomers().then(function (results){
+        $scope.customers = results.data.value;
+        $scope.selectedCustomer = { value: $scope.customers[0] };
+    });
+
+     function saveTicketPurchase ()
+     {
+        ticketPurchasesService.editTicket($scope.newVenue).then(function(results) {
+            $('#myModal').modal('hide')
+            var venue = results.data;
+            window.location = 'http://localhost:32150/#/Venue/' + venue.Venue_ID
+        });
+     }
 
 }]);

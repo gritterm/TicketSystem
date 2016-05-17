@@ -1,0 +1,17 @@
+ <!-- Customer Selection -->
+ <div>Ticket Purchase {{ticketPurchase.Ticket_Purchase_ID}}</div>
+ <input type=date ng-model="ticketPurchase.Ticket_Purchase_Date"/>
+ <ui-select ng-model="selectedCustomer.value">
+  <ui-select-match>
+      <span ng-bind="$select.selected.Customer_Name"></span>
+  </ui-select-match>
+  <ui-select-choices repeat="customer in (customers | filter: $select.search) track by customer.Customer_ID">
+      <span ng-bind="customer.Customer_Name"></span>
+  </ui-select-choices>
+</ui-select> 
+
+<div><span>TicketPurchaseLines</span></div>
+
+<div ui-grid="searchOptions" class="myGrid"></div>
+
+<button class="btn btn-primary" ng-click="savePurchase()">Save</button>

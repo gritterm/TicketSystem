@@ -45,8 +45,7 @@ namespace TicketSystem.Core.Model
                 //can't delete an event that has had ticket purchases made - set historical instead
                 if(context.TicketPurchaseLines.Any(tpl => tpl.Event_ID == this.Event_ID))
                 {
-                    //set up an error message to return to the front end to set historical
-                    //front end should disable deletion based on their being tpls
+                    SetEntityError("This event can't be deleted due to historical data. Please deactivate instead");
                     return false;
                 }
             }
