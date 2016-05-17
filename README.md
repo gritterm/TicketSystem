@@ -9,6 +9,8 @@ Download and extract zip.
 
 Open up the sln file.
 
+There may be some nuget issues.  
+
 Right click the solution and set both Server and Web as startup projects
 
 Signup for an account and then login.
