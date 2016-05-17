@@ -7,7 +7,7 @@ app.controller('ticketPurchaseSearchController', ['$scope', 'ticketPurchasesServ
     $scope.saveTicketPurchase = saveTicketPurchase;
 
     $scope.searchoptions.newEntityAction = function(){
-        $('#myModal').modal('show')
+       saveTicketPurchase();
     };  
     ticketPurchasesService.getTickets().then(function (results) {
         $scope.searchoptions.gridData = results.data.value;
@@ -18,7 +18,12 @@ app.controller('ticketPurchaseSearchController', ['$scope', 'ticketPurchasesServ
 
     function saveTicketPurchase()
     {
-        ticketPurchasesService.newTicketPurchase();
+        ticketPurchasesService.newTicket().then(function(result)
+            {
+                var ticket = result.data;
+                window.location = 'http://localhost:32150/#/TicketPurchase/' + ticket.Ticket_Purchase_ID
+
+            });
     }
 
 }]);

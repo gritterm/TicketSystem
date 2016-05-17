@@ -35,7 +35,7 @@ app.config(function ($routeProvider) {
 
      $routeProvider.when("/TicketPurchase/:ticketId" , {
         controller: "ticketPurchaseController",
-        templateUrl: "/app/views/ticketPurhcase.html"
+        templateUrl: "/app/views/ticketPurchase.html"
     });
 
     $routeProvider.when("/refresh", {

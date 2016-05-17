@@ -1,9 +1,8 @@
 'use strict';
 app.controller('ticketPurchaseController', 
     ['$routeParams','$scope', 'ticketPurchasesService', 'customersService', 'eventsService',
- function ($scope, ticketPurchasesService, customersService, eventsService) {
+ function ($routeParams, $scope, ticketPurchasesService, customersService, eventsService) {
     var ticketId = $routeParams.ticketId;
-    $scope.searchoptions.newEntityName = "New Ticket Purchase";
 
     $scope.saveTicketPurchase = saveTicketPurchase;
 
