@@ -1,7 +1,7 @@
 Ticket System
 =======================
 
-Base of the project can be found here:  Security pretty much unmodified (pulled out openID for now)
+Base of the project can be found here: https://github.com/tjoudeh/AspNetIdentity.WebApi  Security pretty much unmodified (pulled out openID for now)
 
 Entity Framework base kept and expanded upon.
 
