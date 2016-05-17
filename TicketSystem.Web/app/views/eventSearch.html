@@ -9,12 +9,23 @@
         <input ng-model="newEvent.Event_Name"/> 
         <input type="date" ng-model="newEvent.Event_Date"   />     
         
-        <ui-select ng-model="newEvent.Event_Type_ID">
+
+        <!-- Select Event Type -->
+        <ui-select ng-model="selectedEventType.value">
           <ui-select-match>
-              <span ng-bind="$select.newEvent.Event_Type_Name"></span>
+              <span ng-bind="$select.selected.Event_Type_Name"></span>
           </ui-select-match>
           <ui-select-choices repeat="eventType in (eventTypes | filter: $select.search) track by eventType.Event_Type_ID">
               <span ng-bind="eventType.Event_Type_Name"></span>
+          </ui-select-choices>
+        </ui-select> 
+        <!-- Select Venue -->
+        <ui-select ng-model="selectedVenue.value">
+          <ui-select-match>
+              <span ng-bind="$select.selected.Venue_Name"></span>
+          </ui-select-match>
+          <ui-select-choices repeat="venue in (venues | filter: $select.search) track by venue.Venue_ID">
+              <span ng-bind="venue.Venue_Name"></span>
           </ui-select-choices>
         </ui-select> 
       </div>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,19 @@ namespace TicketSystem.Core.Framework
 {
     public abstract class Entity : IEntity
     {
-        public virtual bool PreSave(EntityState state)
+        [NotMapped]
+        public bool SaveFailure { get; set; }
+
+        [NotMapped]
+        public string SaveFailureMessage { get; set; }
+
+        public void SetEntityError(string errorMessage)
+        {
+            this.SaveFailureMessage = errorMessage;
+            this.SaveFailure = true;
+        }
+
+        public virtual bool PreSave(ModelContext context, EntityState state)
         {
             return true;
         }

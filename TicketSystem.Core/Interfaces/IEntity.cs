@@ -9,6 +9,9 @@ namespace TicketSystem.Core.Interfaces
 {
     public interface IEntity
     {
-        bool PreSave(EntityState state);
+        bool SaveFailure { get; set; }
+        string SaveFailureMessage { get; set; }
+        bool PreSave(ModelContext context, EntityState state);
+
     }
 }

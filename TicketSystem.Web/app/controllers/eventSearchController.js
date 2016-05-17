@@ -1,6 +1,6 @@
 'use strict';
-app.controller('eventSearchController', ['$scope', '$route', 'eventsService','eventTypesService',
- function ($scope, $route,eventsService, eventTypesService) {
+app.controller('eventSearchController', ['$scope', '$route', 'eventsService','eventTypesService', 'venuesService',
+ function ($scope, $route,eventsService, eventTypesService, venuesService) {
 
     $scope.events = [];
     $scope.searchoptions = {};
@@ -17,10 +17,7 @@ app.controller('eventSearchController', ['$scope', '$route', 'eventsService','ev
         name: 'Venue_Name'
     },
     {
-        name: 'Customer_Email'
-    },
-    {
-        name: 'Event_Type_name'
+        name: 'Event_Type_Name'
     },
     {
         name: 'Event_Date'
@@ -28,15 +25,9 @@ app.controller('eventSearchController', ['$scope', '$route', 'eventsService','ev
     
     $scope.newEvent = {
     };
-    $scope.itemArray = [
-        {id: 1, name: 'first'},
-        {id: 2, name: 'second'},
-        {id: 3, name: 'third'},
-        {id: 4, name: 'fourth'},
-        {id: 5, name: 'fifth'},
-    ];
+   
 
-    $scope.selected = { value: $scope.itemArray[0] };
+
     $scope.saveEvent = saveEvent;
 
     $scope.searchoptions.newEntityAction = function(){
@@ -44,7 +35,14 @@ app.controller('eventSearchController', ['$scope', '$route', 'eventsService','ev
     };  
     eventTypesService.getEventTypes().then(function (results){
         $scope.eventTypes = results.data.value;
-    })
+        $scope.selectedEventType = { value: $scope.eventTypes[0] };
+
+    });
+
+    venuesService.getVenues().then(function (results){
+        $scope.venues = results.data.value;
+        $scope.selectedVenue = { value: $scope.venues[0] };
+    });
     eventsService.getEvents().then(function (results) {
         $scope.searchoptions.data = results.data.value;
         $scope.searchoptions.enableFiltering = true;     
@@ -54,6 +52,9 @@ app.controller('eventSearchController', ['$scope', '$route', 'eventsService','ev
 
     function saveEvent()
     {
+        $scope.newEvent.Event_Type_ID = $scope.selectedEventType.value.Event_Type_ID;
+        $scope.newEvent.Venue_ID = $scope.selectedVenue.value.Venue_ID;
+
         eventsService.newEvent($scope.newEvent).then(function(results) {
             $('#myModal').modal('hide')
             var event = results.data;

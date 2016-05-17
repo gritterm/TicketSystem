@@ -6,9 +6,8 @@ app.directive('searchDirective', function() {
       scope:{
         searchOptions : '='
       },
-      template: '<button ng-click="searchOptions.newEntityAction()">{{searchOptions.newEntityName}}</button><div ui-grid="searchOptions" class="myGrid"></div>',
+      template: '<button class="btn btn-primary" ng-click="searchOptions.newEntityAction()">{{searchOptions.newEntityName}}</button><div ui-grid="searchOptions" class="myGrid"></div>',
       link: function(scope, elem, attrs) {
-        console.log('here');
       }
 
   };

@@ -49,9 +49,10 @@ namespace TicketSystem.Core
             foreach (var stateEntry in stateEntries)
             {
                 var entity = stateEntry.Entity as IEntity;
-                if(!entity.PreSave(stateEntry.State))
+                if(!entity.PreSave(this, stateEntry.State))
                 {
                     this.Entry(entity).State = EntityState.Detached;
+                    entity.SaveFailure = true;
                 }
             }
         }
@@ -63,6 +64,7 @@ namespace TicketSystem.Core
 
         public override Task<int> SaveChangesAsync()
         {
+            PreSave();
             return base.SaveChangesAsync();
         }
 
