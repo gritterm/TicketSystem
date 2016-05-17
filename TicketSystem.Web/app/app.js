@@ -33,6 +33,11 @@ app.config(function ($routeProvider) {
         templateUrl: "/app/views/customerCard.html"
     });
 
+     $routeProvider.when("/TicketPurchase/:ticketId" , {
+        controller: "ticketPurchaseController",
+        templateUrl: "/app/views/ticketPurhcase.html"
+    });
+
     $routeProvider.when("/refresh", {
         controller: "refreshController",
         templateUrl: "/app/views/refresh.html"

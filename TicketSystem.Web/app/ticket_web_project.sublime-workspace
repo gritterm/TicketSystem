@@ -1,1 +1,912 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"_getTi",
+				"_getTicketWithLines"
+			],
+			[
+				"ticketPurch",
+				"ticketPurchasesService"
+			],
+			[
+				"event",
+				"eventTypes"
+			],
+			[
+				"eventTypes",
+				"eventTypesService"
+			],
+			[
+				"s",
+				"searchoptions"
+			],
+			[
+				"customersSer",
+				"customersServiceFactory"
+			],
+			[
+				"WorkOrd",
+				"WorkOrderId"
+			],
+			[
+				"Workorder",
+				"WorkOrderId"
+			],
+			[
+				"in",
+				"indexOf"
+			],
+			[
+				"workOr",
+				"workOrder"
+			],
+			[
+				"filter",
+				"filteredWorkOrders"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/index.html",
+			"settings":
+			{
+				"buffer_size": 5963,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controllers/venueSearchController.js",
+			"settings":
+			{
+				"buffer_size": 1203,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/ticketPurchase.html",
+			"settings":
+			{
+				"buffer_size": 680,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "services/customersService.js",
+			"settings":
+			{
+				"buffer_size": 967,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "services/ticketPurchasesService.js",
+			"settings":
+			{
+				"buffer_size": 1076,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 2505,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controllers/ticketPurchaseController.js",
+			"settings":
+			{
+				"buffer_size": 1087,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 297.0,
+		"last_filter": "git diff",
+		"selected_items":
+		[
+			[
+				"git diff",
+				"Git: Diff Staged Files"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"git diff ",
+				"Git: Diff Staged Files"
+			],
+			[
+				"git add ",
+				"Git: Add Current File"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			],
+			[
+				"git pull",
+				"Git: Pull"
+			],
+			[
+				"git pul",
+				"Git: Pull"
+			],
+			[
+				"git init",
+				"Git: Init"
+			],
+			[
+				"switch",
+				"Git: Switch Repo"
+			],
+			[
+				"git fetch",
+				"Git: Fetch"
+			],
+			[
+				"git fet",
+				"Git: Fetch"
+			],
+			[
+				"git remote",
+				"Git: Remote"
+			],
+			[
+				"add",
+				"Git: Add Remote"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 703.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/controllers",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/services",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/directives",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/views"
+	],
+	"file_history":
+	[
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/controllers/eventController.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/directives/searchDirective.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/controllers/customerSearchController.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/controllers/ticketPurchaseController.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/controllers/eventSearchController.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/services/venuesService.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/views/venueSearch.html",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/views/customerCard.html",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/controllers/eventTypeSearchController.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/views/eventSearch.html",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/index.html",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/views/eventTypeSearch.html",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/views/customerSearch.html",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/services/eventsService.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/services/venueService.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/controllers/customerController.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/views/ticketPurchaseSearch.html",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/services/eventService.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/services/eventTypeService.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/controllers/venueController.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/controllers/eventTypeController.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/services/customersService.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/controllers/venueSearchController.cs",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/views/ticketPurchase.html",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/controllers/ticketPurchaseSearchController.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/services/ticketPurchasesService.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/views/orders.html",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/controllers/ordersController.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/controllers/loginController.js",
+		"/C/Users/Matthew/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/ticket_web_project.sublime-project",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/controllers/customersController.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/views/login.html",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/services/authService.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/app.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/app/services/ordersService.js",
+		"/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/content/css/site.css",
+		"/C/Routing/www/app/src/main/tabs/workorder/tmpl.workorder.html",
+		"/C/Routing/server/tsp.js",
+		"/C/Routing/www/app/src/main/tabs/workorder/controller.workorder.js",
+		"/C/Routing/server/models/route.js",
+		"/C/Routing/www/app/src/main/tabs/trucks/controller.trucks.js",
+		"/C/Routing/server/controllers/schedule.js",
+		"/C/Routing/www/app/src/main/workorder_search/tmpl.workOrderSearch.html",
+		"/C/Routing/www/app/src/main/tabs/workorder/controller.workorders.js",
+		"/C/Routing/www/app/src/main/tabs/services/controller.services.js",
+		"/C/Routing/server/controllers/workorder.js",
+		"/C/Routing/www/app/src/main/workorder_search/directive.workOrderSearch.js",
+		"/C/Routing/www/app/src/main/tabs/trucks/tmpl.trucks.html",
+		"/C/Routing/server/controllers/route.js",
+		"/C/Routing/server/app.js",
+		"/C/Routing/server/models/schedule.js",
+		"/C/Routing/server/models/workorder.js",
+		"/C/Routing/server/controllers/service.js",
+		"/C/Routing/www/app/src/main/tabs/workorder/tmpl.workorders.html",
+		"/C/Routing/www/app/src/main/tabs/services/tmpl.services.html",
+		"/C/Routing/server/models/service.js",
+		"/C/Routing/server/models/depot.js",
+		"/C/Routing/www/app/src/module.js",
+		"/C/Routing/www/app/src/main/tabs/routes/factory.mapTools.js",
+		"/C/Routing/www/app/src/main/tabs/routes/controller.routes.js",
+		"/C/Routing/server/geo.js",
+		"/C/Routing/www/app/src/genetic-tsp.js",
+		"/C/Routing/www/app/src/main/tabs/routes/tmpl.routes.html",
+		"/C/Routing/server/models/truckarea.js",
+		"/C/Users/Matthew/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Routing/www/app/components/ag-grid/package.json",
+		"/C/Routing/www/app/components/angular/package.json",
+		"/C/Routing/server/models/customer.js",
+		"/C/Routing/www/app/src/routes.js",
+		"/C/Routing/routing.sublime-project",
+		"/C/Routing/www/app/src/main/smart-input/directive.smartInput.js",
+		"/C/Routing/server/controllers/company.js",
+		"/C/Routing/www/app/src/login/controller.login.js",
+		"/C/Routing/gulpfile.js",
+		"/C/Trucking/routing/package.json",
+		"/C/Trucking/routing/Vagrantfile",
+		"/C/Trucking/routing/bower.json",
+		"/C/Trucking/routing/gulpfile.js",
+		"/C/Trucking/routing/server/models/company.js",
+		"/C/Trucking/routing/server/permissions.js",
+		"/C/Trucking/routing/server/email.js",
+		"/C/Trucking/routing/server/billing.js",
+		"/C/Trucking/routing/server/app.js",
+		"/C/Trucking/routing/server/sms.js",
+		"/C/Trucking/routing/server/config.json"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"event",
+			"customer",
+			"event",
+			"customer",
+			"bootstrap",
+			"angular",
+			"order",
+			"}",
+			"{day:",
+			"{day: ",
+			"{day: 'Sunday",
+			"delete",
+			"companyid",
+			"company",
+			"workorderload",
+			"schedule",
+			"activate",
+			".then",
+			"activate",
+			"workOrderLoaded",
+			"workOrderloaded",
+			"wovm.workOrder",
+			"saveserv",
+			"create(",
+			"create",
+			"Schedules",
+			"WorkOrders",
+			"LineItems",
+			"newlineitem",
+			"newLineItem",
+			"newline",
+			"3001",
+			"9001",
+			"3000",
+			"RecurringOrder",
+			"workOrder",
+			"WorkOrder",
+			"workOrder",
+			"WorkOrder",
+			"ffi",
+			"9001",
+			".post",
+			"controllers.init(",
+			"app.init(",
+			"init(",
+			".init",
+			"bodypa",
+			"express.",
+			"log",
+			"routeMatrix",
+			"matrix",
+			"queryifyStart",
+			"matrix",
+			"let",
+			"printRoutes",
+			"print",
+			"rvm.routes",
+			"routes",
+			"solveRoute",
+			"maps",
+			"associateWaypoints",
+			"solveRoute",
+			"getPathArray",
+			"SOLVE_RATE",
+			".date",
+			"moment()",
+			"date",
+			"save = save",
+			"router",
+			"sequeli",
+			"models"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Venue",
+			"venue",
+			"Event",
+			"event",
+			"Venue",
+			"venue",
+			"event",
+			"venue",
+			"eventType",
+			"event",
+			"customer"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/Matthew/Source/Repos/TicketSystemWeb/TicketSystem.Web/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5963,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2720,
+								2720
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1088.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "controllers/venueSearchController.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1203,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								956,
+								1191
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "views/ticketPurchase.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 680,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								556,
+								556
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "services/customersService.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 967,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								243,
+								243
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "services/ticketPurchasesService.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1076,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								987,
+								1005
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2505,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1026,
+								1026
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 153.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "controllers/ticketPurchaseController.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1087,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								261,
+								269
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.441456654317,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ticket_web_project.sublime-project",
+	"replace":
+	{
+		"height": 80.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ticket",
+				"views\\ticketPurchase.html"
+			],
+			[
+				"eventtypes",
+				"controllers\\eventTypeSearchController.js"
+			],
+			[
+				"directive",
+				"directives\\searchDirective.js"
+			],
+			[
+				"workorder",
+				"www\\app\\src\\main\\tabs\\workorder\\tmpl.workorder.html"
+			],
+			[
+				"tsp",
+				"server\\tsp.js"
+			],
+			[
+				"tsp.js",
+				"server\\tsp.js"
+			],
+			[
+				"tmpl.work",
+				"www\\app\\src\\main\\tabs\\workorder\\tmpl.workorder.html"
+			],
+			[
+				"workord",
+				"www\\app\\src\\main\\tabs\\workorder\\controller.workorder.js"
+			],
+			[
+				"schedul",
+				"server\\models\\schedule.js"
+			],
+			[
+				"app.js",
+				"server\\app.js"
+			],
+			[
+				"servercontrollersrout",
+				"server\\controllers\\route.js"
+			],
+			[
+				"tmpl.workord",
+				"www\\app\\src\\main\\tabs\\workorder\\tmpl.workorder.html"
+			],
+			[
+				"contro",
+				"www\\app\\src\\main\\tabs\\workorder\\controller.workorder.js"
+			],
+			[
+				"schedule",
+				"server\\controllers\\schedule.js"
+			],
+			[
+				"schedule.js",
+				"server\\models\\schedule.js"
+			],
+			[
+				"controller.serv",
+				"www\\app\\src\\main\\tabs\\services\\controller.services.js"
+			],
+			[
+				"controller.work",
+				"www\\app\\src\\main\\tabs\\workorder\\controller.workorder.js"
+			],
+			[
+				"shedule",
+				"server\\models\\schedule.js"
+			],
+			[
+				"workorder.js",
+				"server\\controllers\\workorder.js"
+			],
+			[
+				"controller.worko",
+				"www\\app\\src\\main\\tabs\\workorder\\controller.workorders.js"
+			],
+			[
+				"workorders",
+				"www\\app\\src\\main\\workorder_search\\tmpl.workOrderSearch.html"
+			],
+			[
+				"directive.wor",
+				"www\\app\\src\\main\\workorder_search\\directive.workOrderSearch.js"
+			],
+			[
+				"work",
+				"server\\models\\workorder.js"
+			],
+			[
+				"models/rout",
+				"server\\models\\route.js"
+			],
+			[
+				"workordersear",
+				"www\\app\\src\\main\\workorder_search\\directive.workOrderSearch.js"
+			],
+			[
+				"tmp.work",
+				"www\\app\\src\\main\\tabs\\workorder\\tmpl.workorder.html"
+			],
+			[
+				"truck",
+				"www\\app\\src\\main\\tabs\\trucks\\tmpl.trucks.html"
+			],
+			[
+				"service",
+				"server\\controllers\\service.js"
+			],
+			[
+				"workordercon",
+				"www\\app\\src\\main\\tabs\\workorder\\controller.workorder.js"
+			],
+			[
+				"worko",
+				"server\\models\\workorder.js"
+			],
+			[
+				"schedule.",
+				"server\\models\\schedule.js"
+			],
+			[
+				"tsp.j",
+				"server\\tsp.js"
+			],
+			[
+				"module",
+				"www\\app\\src\\module.js"
+			],
+			[
+				"main.rs",
+				"www\\app\\src\\main\\workorder_search\\tmpl.workOrderSearch.html"
+			],
+			[
+				"genet",
+				"www\\app\\src\\genetic-tsp.js"
+			],
+			[
+				"factory.",
+				"www\\app\\src\\main\\tabs\\routes\\factory.mapTools.js"
+			],
+			[
+				"controller.routes.js",
+				"www\\app\\src\\main\\tabs\\routes\\controller.routes.js"
+			],
+			[
+				"pack",
+				"www\\app\\components\\angular\\package.json"
+			],
+			[
+				"packa",
+				"www\\app\\components\\ag-grid\\package.json"
+			],
+			[
+				"controller.routes",
+				"www\\app\\src\\main\\tabs\\routes\\controller.routes.js"
+			],
+			[
+				"model.r",
+				"server\\models\\route.js"
+			],
+			[
+				"tmpl.r",
+				"www\\app\\src\\main\\tabs\\routes\\tmpl.routes.html"
+			],
+			[
+				"controller.rou",
+				"www\\app\\src\\main\\tabs\\routes\\controller.routes.js"
+			],
+			[
+				"route",
+				"www\\app\\src\\main\\tabs\\routes\\tmpl.routes.html"
+			],
+			[
+				"rout",
+				"www\\app\\src\\routes.js"
+			],
+			[
+				"tmpl.workorder.html",
+				"www\\app\\src\\main\\tabs\\workorder\\tmpl.workorder.html"
+			],
+			[
+				"maptools",
+				"www\\app\\src\\main\\tabs\\routes\\factory.mapTools.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 1,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 352.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

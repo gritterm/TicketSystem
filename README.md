@@ -1,7 +1,16 @@
-AngularJS Authentication
+Ticket System
 =======================
 
-Tutorial shows Authentication in AngularJS with ASP.NET Web API 2 and Owin Middleware using access tokens and refresh tokens approach. 
+Base of the project can be found here:  Security pretty much unmodified (pulled out openID for now)
 
-![Alt text](http://bitoftech.net/wp-content/uploads/2014/05/AngularJSAuthentication.png "AngularJS Authentication")
-![Alt text](http://bitoftech.net/wp-content/uploads/2014/07/RefreshTokenAngularJS.jpg "AngularJS Refresh Tokens")
+Entity Framework base kept and expanded upon.
+
+Download and extract zip.
+
+Open up the sln file.
+
+Right click the solution and set both Server and Web as startup projects
+
+Signup for an account and then login.
+
+Enjoy.
